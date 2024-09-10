@@ -1,0 +1,94 @@
+@font-face {
+  font-family: work-sans;
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+body {
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: hsl(275, 100%, 97%);
+  font-family: work-sans;
+  margin: 0;
+}
+body .container {
+  width: 600px;
+  margin: 320px auto 25px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+body .container .svg-start {
+  padding-right: 15px;
+}
+body .container .tittle {
+  font-weight: 700;
+}
+body .container .tittle,
+body .container .answer {
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+}
+body .container .box {
+  cursor: pointer;
+}
+body .container .box .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+}
+body .container .box .question p {
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+}
+body .container .box .question p:hover {
+  color: purple;
+}
+body .container .box .question .svg-minus {
+  display: none;
+}
+body .container .box .answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+body .container .box .answer p {
+  color: hsl(292, 16%, 49%);
+}
+body .container .box hr {
+  height: 1px;
+  background-color: hsl(275, 100%, 97%);
+  border: none;
+  width: 90%;
+}
+body .container .box.active .answer {
+  max-height: 130px;
+}
+body .container .box.active .question .svg-plus {
+  display: none;
+}
+body .container .box.active .question .svg-minus {
+  display: block;
+}
+body .attribution {
+  font-size: 12px;
+  text-align: center;
+}
+body .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+  }
+  body .container {
+    max-width: 350px;
+    margin: 100px auto 25px;
+  }
+  body .container .box .question p {
+    width: 320px;
+  }
+}/*# sourceMappingURL=styles.css.map */

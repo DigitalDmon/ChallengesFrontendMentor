@@ -1,0 +1,116 @@
+// ## Colors
+
+// ### Primary
+
+$Yellow: hsl(47, 88%, 63%);
+
+// ### Neutral
+
+$White: hsl(0, 0%, 100%);
+$Grey: hsl(0, 0%, 50%);
+$Black: hsl(0, 0%, 7%);
+
+// ## Typography
+
+// ### Body Copy
+
+// - Font size (paragraph): 16px
+
+// ### Font
+
+@font-face {
+    font-family: figtree;
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: figtreeBold;
+    src: url(./assets/fonts/static/Figtree-ExtraBold.ttf);
+}
+
+// - Weights: 500, 800
+
+body {
+    background-color: hsl(47, 88%, 63%);
+    margin: 0;
+
+    .container {
+        width: 376px;
+        margin: 100px auto;
+        background-color: $White;
+        border: 1px solid $Black;
+        border-radius: 15px;
+        box-shadow: $Black 7px 7px 1px;
+
+        .box1 {
+            text-align: center;
+            padding-top: 20px;
+
+            img {
+                border-radius: 15px;
+            }
+        }
+
+        .box2,
+        .box3 {
+            padding: 0 20px;
+        }
+
+        .box2 {
+
+            h5,
+            h4,
+            h2,
+            p {
+                font-family: figtree;
+            }
+
+            h5 {
+                background-color: $Yellow;
+                width: 85px;
+                height: 30px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                font-size: 16px;
+                font-weight: 800;
+                border-radius: 5px;
+            }
+
+            h1 {
+                font-family: figtree2;
+            }
+
+            p {
+                font-size: 16px;
+                color: $Grey;
+            }
+        }
+
+        .box3 {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 35px;
+                padding-right: 10px;
+            }
+
+            h5 {
+                font-family: figtree;
+                font-size: 16px;
+                font-weight: 800;
+            }
+        }
+
+    }
+
+    .attribution {
+        font-size: 16px;
+        text-align: center;
+
+        a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
